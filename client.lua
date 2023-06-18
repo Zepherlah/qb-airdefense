@@ -52,8 +52,9 @@ end
 
 function SetEngineFailure(vehicle, v, curDist)
     local Playerdata = QBCore.Functions.GetPlayerData()
+    local hasItem = QBCore.Functions.HasItem('pilotlicense')
     local JobName = Playerdata.job.name 
-    if JobName == 'police' or JobName == 'ambulance' then
+    if JobName == 'police' or JobName == 'ambulance' or hasItem then
         return
     else
         if curDist then
