@@ -80,6 +80,7 @@ function SetEngineFailure(vehicle, v, curDist)
                 Citizen.Wait(1000)
                 QBCore.Functions.Notify("1.", "error", 1000)
                 Citizen.Wait(1000)
+                local inDistance, zone = isInDistance()
                 if not inDistance then 
                     return 
                 else
