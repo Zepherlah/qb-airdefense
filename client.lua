@@ -81,8 +81,8 @@ function SetEngineFailure(vehicle, v, curDist)
                 QBCore.Functions.Notify("1.", "error", 1000)
                 Citizen.Wait(1000)
                 local inDistance, zone = isInDistance()
-                if not inDistance then 
-                    return 
+                if not inDistance then                  
+                    return
                 else
                     local vehicleCoords = GetEntityCoords(vehicle)
                     AddExplosion(vehicleCoords.x, vehicleCoords.y, vehicleCoords.z, 5, 50.0, true, false, 1.0)
@@ -90,7 +90,7 @@ function SetEngineFailure(vehicle, v, curDist)
                     Citizen.Wait(v.timeLow * 1000)
                     SetVehicleEngineHealth(vehicle, 300)
                     Citizen.Wait(v.timeLow * 1000)
-                    SetVehicleEngineOn(vehicle, false, true, true)                 
+                    SetVehicleEngineOn(vehicle, false, true, true)               
                 end
             end
         end
